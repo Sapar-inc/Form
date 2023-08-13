@@ -79,8 +79,8 @@ const resInput = (e) => {
     const data = `${nameInput.value},${surnameInput.value},${emailInput.value},${phoneNumber}`;
     let CheckDuble = localStorage.getItem("myDataKey");
     if(data !== CheckDuble){
-        console.log(data);
         localStorage.setItem("myDataKey", data);
+        alert("Поздравляем, вы отправили форму! >:D")
     } else {
         document.querySelector("button").insertAdjacentHTML("afterend", "<p class='error-message'>Дубликат данных уже существует!</p>");
     }
